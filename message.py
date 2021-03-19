@@ -23,7 +23,7 @@ def iothub_message(condition):
             message = Message(msg_txt_formatted)
 
             # Add a custom application property to the message.
-            # An IoT hub can filter on these properties without access to the message body.
+            # IoT hub can filter on these properties without access to the message body.
             if temperature > 40:
                 message.custom_properties["temperatureAlert"] = "true"
             else:
