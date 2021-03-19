@@ -1,0 +1,13 @@
+normal_temp_min = 36.2
+normal_temp_max = 37.5
+high_temp_min = 39.5
+high_temp_max = 42.5
+normal_heartbeat_min = 70
+normal_heartbeat_max = 90
+high_heartbeat_min = 150
+high_heartbeat_max = 190
+normal_oxygen_min = 90
+normal_oxygen_max = 95
+normal_blood_pressure = '120/80'
+high_blood_pressure = '160/100'
+MSG_TXT = '{{"temperature": {temperature},"heartbeat": {heartbeat},"oxygen": {oxygen}}}'
