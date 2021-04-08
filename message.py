@@ -43,7 +43,7 @@ def iothub_message(condition):
             while firstevent > 0:
                 firstevent -= 1
                 temperature = random.uniform(params.high_temp_firstevent_min, params.high_temp_firstevent_max)
-                heartbeat = random.uniform(params.normal_heartbeat_min, params.normal_heartbeat_max)
+                heartbeat = random.uniform(params.high_heartbeat_firstevent_min, params.high_heartbeat_firstevent_max)
                 oxygen = random.uniform(params.normal_oxygen_min, params.normal_oxygen_max)
 
                 msg_txt_formatted = params.MSG_TXT.format(temperature=temperature, heartbeat=heartbeat, oxygen=oxygen)
@@ -57,7 +57,7 @@ def iothub_message(condition):
             while secondevent > 0:
                 secondevent -= 1
                 temperature = random.uniform(params.high_temp_secondevent_min, params.high_temp_secondevent_max)
-                heartbeat = random.uniform(params.normal_heartbeat_min, params.normal_heartbeat_max)
+                heartbeat = random.uniform(params.high_heartbeat_secondevent_min, params.high_heartbeat_secondevent_max)
                 oxygen = random.uniform(params.normal_oxygen_min, params.normal_oxygen_max)
 
                 msg_txt_formatted = params.MSG_TXT.format(temperature=temperature, heartbeat=heartbeat, oxygen=oxygen)
@@ -71,8 +71,22 @@ def iothub_message(condition):
             while thirdevent > 0:
                 thirdevent -= 1
                 temperature = random.uniform(params.high_temp_thirdevent_min, params.high_temp_thirdevent_max)
-                heartbeat = random.uniform(params.normal_heartbeat_min, params.normal_heartbeat_max)
+                heartbeat = random.uniform(params.high_heartbeat_thirdevent_min, params.high_heartbeat_thirdevent_max)
                 oxygen = random.uniform(params.normal_oxygen_min, params.normal_oxygen_max)
+
+                msg_txt_formatted = params.MSG_TXT.format(temperature=temperature, heartbeat=heartbeat, oxygen=oxygen)
+                message = Message(msg_txt_formatted)
+
+                print(f"Sending {condition} message: {message}")
+                client.send_message(message)
+                time.sleep(10)
+
+            finalevent = 2
+            while finalevent > 0:
+                finalevent -= 1
+                temperature = random.uniform(0, 0)
+                heartbeat = random.uniform(0, 0)
+                oxygen = random.uniform(0, 0)
 
                 msg_txt_formatted = params.MSG_TXT.format(temperature=temperature, heartbeat=heartbeat, oxygen=oxygen)
                 message = Message(msg_txt_formatted)
