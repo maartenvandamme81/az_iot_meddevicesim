@@ -1,3 +1,7 @@
+normalduration = 12
+intervalduration = 12
+sleepduration = 10
+
 normal_temp_min = 37.5
 normal_temp_max = 37.7
 
@@ -18,10 +22,17 @@ high_heartbeat_secondevent_max = 130
 high_heartbeat_thirdevent_min = 160
 high_heartbeat_thirdevent_max = 180
 
+high_oxygen_firstevent_min = 94
+high_oxygen_firstevent_max = 95
+high_oxygen_secondevent_min = 92
+high_oxygen_secondevent_max = 93
+high_oxygen_thirdevent_min = 89
+high_oxygen_thirdevent_max = 91
+
 high_heartbeat_min = 150
 high_heartbeat_max = 190
 
-normal_oxygen_min = 90
+normal_oxygen_min = 97
 normal_oxygen_max = 95
 
 MSG_TXT = '{{"temperature": {temperature},"heartbeat": {heartbeat},"oxygen": {oxygen}}}'
