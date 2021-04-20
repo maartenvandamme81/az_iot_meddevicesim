@@ -1,4 +1,4 @@
-normalduration = 12
+normalduration = 48
 intervalduration = 12
 sleepduration = 10
 

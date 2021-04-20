@@ -1,5 +1,7 @@
 # custom
 devices.txt
+devices_backup.txt
+devices_MDT.txt
 .idea/
 # Byte-compiled / optimized / DLL files
 __pycache__/

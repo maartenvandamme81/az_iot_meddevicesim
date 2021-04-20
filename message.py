@@ -19,6 +19,13 @@ def iothub_message(condition):
 
                 msg_txt_formatted = params.MSG_TXT.format(temperature=temperature, heartbeat=heartbeat, oxygen=oxygen)
                 message = Message(msg_txt_formatted)
+                message.content_encoding = "utf-8"
+                message.content_type = "application/json"
+
+                if temperature > 40:
+                    message.custom_properties["temperatureAlert"] = "true"
+                else:
+                    message.custom_properties["temperatureAlert"] = "false"
 
                 print(f"Sending {condition} message: {message}")
                 client.send_message(message)
@@ -34,6 +41,13 @@ def iothub_message(condition):
 
                 msg_txt_formatted = params.MSG_TXT.format(temperature=temperature, heartbeat=heartbeat, oxygen=oxygen)
                 message = Message(msg_txt_formatted)
+                message.content_encoding = "utf-8"
+                message.content_type = "application/json"
+
+                if temperature > 40:
+                    message.custom_properties["temperatureAlert"] = "true"
+                else:
+                    message.custom_properties["temperatureAlert"] = "false"
 
                 print(f"Sending {condition} message: {message}")
                 client.send_message(message)
@@ -48,6 +62,13 @@ def iothub_message(condition):
 
                 msg_txt_formatted = params.MSG_TXT.format(temperature=temperature, heartbeat=heartbeat, oxygen=oxygen)
                 message = Message(msg_txt_formatted)
+                message.content_encoding = "utf-8"
+                message.content_type = "application/json"
+
+                if temperature > 40:
+                    message.custom_properties["temperatureAlert"] = "true"
+                else:
+                    message.custom_properties["temperatureAlert"] = "false"
 
                 print(f"Sending {condition} message: {message}")
                 client.send_message(message)
@@ -62,6 +83,13 @@ def iothub_message(condition):
 
                 msg_txt_formatted = params.MSG_TXT.format(temperature=temperature, heartbeat=heartbeat, oxygen=oxygen)
                 message = Message(msg_txt_formatted)
+                message.content_encoding = "utf-8"
+                message.content_type = "application/json"
+
+                if temperature > 40:
+                    message.custom_properties["temperatureAlert"] = "true"
+                else:
+                    message.custom_properties["temperatureAlert"] = "false"
 
                 print(f"Sending {condition} message: {message}")
                 client.send_message(message)
@@ -76,6 +104,13 @@ def iothub_message(condition):
 
                 msg_txt_formatted = params.MSG_TXT.format(temperature=temperature, heartbeat=heartbeat, oxygen=oxygen)
                 message = Message(msg_txt_formatted)
+                message.content_encoding = "utf-8"
+                message.content_type = "application/json"
+
+                if temperature > 40:
+                    message.custom_properties["temperatureAlert"] = "true"
+                else:
+                    message.custom_properties["temperatureAlert"] = "false"
 
                 print(f"Sending {condition} message: {message}")
                 client.send_message(message)
@@ -90,6 +125,13 @@ def iothub_message(condition):
 
                 msg_txt_formatted = params.MSG_TXT.format(temperature=temperature, heartbeat=heartbeat, oxygen=oxygen)
                 message = Message(msg_txt_formatted)
+                message.content_encoding = "utf-8"
+                message.content_type = "application/json"
+
+                if temperature > 40:
+                    message.custom_properties["temperatureAlert"] = "true"
+                else:
+                    message.custom_properties["temperatureAlert"] = "false"
 
                 print(f"Sending {condition} message: {message}")
                 client.send_message(message)
